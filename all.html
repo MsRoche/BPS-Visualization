@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--Project sitefor data visualisation-->
+<title>Datasite</title>
+<!--all links and external resources-->
+<head>
+   <!--favicon if you want it-->
+   <link rel="icon" type="image/png" href="img/icons/icon.png">
+   <!--Bootsrap links-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   <!--Link style sheet for non boostrap-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- font Links Below-->
+   <!-- end all links-->
+   <style>
+      .button {
+        display: inline-block;
+      }
+      #padDown {
+      margin-top: 2%;
+      }
+       
+       .test {
+           padding-top: 5%;
+       }
+       
+       .toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+   </style>
+</head>
+<!--start body content, should contain nav div, footer and content div-->
+<body>
+         <div id="visual">
+
+            <!--Place visualisation HERE-->
+             <br>
+             <p align="center"><b>Racial Makeup of Boston Latin Academy Courses</b></p>
+              <p align="center">
+                <button class="race-button" id="reset">Reset Selection</button>
+                <button class="race-button" id="category">Sort by Category</button>
+                <button class="race-button" id="type">Sort by Type</button>
+                <button class="race-button" id="class_size">Sort by Class Size</button>
+                <button class="race-button" id="alphabetically">Sort Alphabetically</button>
+              </p>
+                <svg align="center" width="1560" height="500" class="barchart_race"></svg>
+
+            <p align="center"><b>Racial Makeup of Academic Categories</b></p>
+             <div width = "1500" height = "500" id = "piecharts_race"></div>
+             
+            <br><br>
+             <p align="center"><b>Gender Makeup of Boston Latin Academy Courses</b></p>
+             <p align="center">
+                <button class="gender-button" id="reset">Reset Selection</button>
+                <button class="gender-button" id="category">Sort by Category</button>
+                <button class="gender-button" id="type">Sort by Type</button>
+                <button class="gender-button" id="class_size">Sort by Class Size</button>
+                <button class="gender-button" id="alphabetically">Sort Alphabetically</button>
+              </p>
+                <svg width="1500" height="500" class="barchart_gender"></svg>
+
+            <p align="center"><b>Gender Makeup of Academic Categories</b></p>
+             <div width = "1500" height = "500" id = "piecharts_gender"></div>
+            <!--end-->
+         </div>
+   <!--Place Data visualisation Scipts Below-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="barchart_all.js"></script>
+    <script src="piecharts_all.js"></script>
+    <script src="barchart_gender_all.js"></script>
+    <script src="piecharts_gender_all.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--Project sitefor data visualisation-->
+<title>Datasite</title>
+<!--all links and external resources-->
+<head>
+   <!--favicon if you want it-->
+   <link rel="icon" type="image/png" href="img/icons/icon.png">
+   <!--Bootsrap links-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   <!--Link style sheet for non boostrap-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- font Links Below-->
+   <!-- end all links-->
+   <style>
+      .button {
+        display: inline-block;
+      }
+      #padDown {
+      margin-top: 2%;
+      }
+       
+       .test {
+           padding-top: 5%;
+       }
+       
+       .toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+   </style>
+</head>
+<!--start body content, should contain nav div, footer and content div-->
+<body data-spy="scroll" data-target="#navigate">
+   <div id="padDown" class="container">
+      <div class="offset-2 col-10">
+        <div class="row">
+                      <img hspace = 20px width = 300px height = 200px src = "https://www.bostonpublicschools.org/cms/lib/MA01906464/Centricity/Template/GlobalAssets/images///logos/BPS-Logo-FOC.png">
+                      
+          <img hspace = 20px width = 300px height = 150px src = "https://upload.wikimedia.org/wikipedia/en/9/9c/Boston_Latin_Academy_%28crest%29.png">
+          <h1>Boston Public School Data Visualization</h1>
+          <h3>Victoria Lawlor, Ryan Perny, Gino Jacob</h3>
+        </div>
+        <hr>
+         <div id="motivation" class="row">
+            <h2>Motivation</h2>
+            <p>We partnered with Boston Public Schools (BPS), specifically Boston Latin Academy, a college preparatory public high school. We were asked to provide visualizations detailing the gender and racial makeup of classes. Boston Latin Academy was specifically interested in how these factors differed in AP/Honors classes vs. regular classes, and by class category (STEM, language, arts, humanities). This project is a smaller part of a larger initiative by BPS to analyze and visualize data on factors predicting student success and graduation.</p>
+         </div>
+         <hr>
+         <div id="data"class="row">
+            <h2>Data</h2>
+            <p>We were provided with data from each class of interest. The data was provided as a google spreadsheet, with each class as its own sheet. Each class consisted of a unique row for each student that contained their race, gender, and year of graduation. Data from each class were aggregated and each class was given a category (STEM, language, arts, humanities) and status of AP/Honors or regular. </p>
+         </div>
+         <hr>
+         <div id="task"class="row">
+            <h2>Task Analysis</h2>
+            <p>Our first interview with Ingrid, our Boston Latin Academy contact, was a skype call in which she described what she wanted us to do for the project, told us about the data, and informed us of the larger BPS project to analyze the large amounts of data that are available on factors predicting student success and graduation. Based on this interaction, we identified the following questions as most pertinent to the project:
+            </p>
+            <ul>
+               <li>What is the gender makeup for those enrolled in AP/honors classes? Does this differ from regular classes?</li>
+               <li>What is the racial makeup for those enrolled in AP/honors classes? Does this differ from regular classes?</li>
+               <li>What is the gender makeup of STEM classes vs. other subjects?</li>
+               <li>What is the racial makeup of STEM classes vs. other subjects?</li>
+            </ul>
+            <p>Our analytic task was thus to summarize, our search task was to locate, and our high-level task was to discover.</p>
+         </div>
+         <hr>
+         <div id="process"class="row">
+            <h2>Design Process</h2>
+             <p>Our final project was the culmination of these initial sketches, which used stacked bar charts and pie charts to encode the gender and racial makeup of classes.
+             </p>
+             <img src="img.png" width="200" height="200">
+             <img src="img2.png" width="200" height="200">
+             <img src="img3.png" width="200" height="200">
+         </div>
+         <hr>
+         <div id="visual">
+            <h2>Final Visualization</h2>
+
+            <!--Place visualisation HERE-->
+             <br>
+             <p align="center"><b>Racial Makeup of Boston Latin Academy Courses</b></p>
+              <p align="center">
+                <button class="race-button" id="reset">Reset Selection</button>
+                <button class="race-button" id="category">Sort by Category</button>
+                <button class="race-button" id="type">Sort by Type</button>
+                <button class="race-button" id="class_size">Sort by Class Size</button>
+                <button class="race-button" id="alphabetically">Sort Alphabetically</button>
+              </p>
+                <svg width="960" height="500" class="barchart_race"></svg>
+
+            <p align="center"><b>Racial Makeup of Academic Categories</b></p>
+             <div width = "1500" height = "500" id = "piecharts_race"></div>
+             
+            <br><br>
+             <p align="center"><b>Gender Makeup of Boston Latin Academy Courses</b></p>
+             <p align="center">
+                <button class="gender-button" id="reset">Reset Selection</button>
+                <button class="gender-button" id="category">Sort by Category</button>
+                <button class="gender-button" id="type">Sort by Type</button>
+                <button class="gender-button" id="class_size">Sort by Class Size</button>
+                <button class="gender-button" id="alphabetically">Sort Alphabetically</button>
+              </p>
+                <svg width="960" height="500" class="barchart_gender"></svg>
+
+            <p align="center"><b>Gender Makeup of Academic Categories</b></p>
+             <div width = "1500" height = "500" id = "piecharts_gender"></div>
+            <!--end-->
+         </div>
+         <hr>
+         <div id="analysis" class="row">
+            <h2>Data Analysis</h2>
+            <p>There were more girls than boys in the classes that we examined, though this could be because girls took a higher number of classes. A greater proportion of girls took AP/Honors classes than regular classes. Girls were also overrepresented in the humanities and STEM classes. The racial makeup of classes appears evenly split between White, Hispanic, Asian, and Black students, with no obvious differences between class types or categories.
+            </p>
+         </div>
+         <hr>
+         <div id="conclude" class="row">
+            <h2>Conclusion</h2>
+            <p>Our visualizations show the gender and racial makeup of classes at the Boston Latin Academy. Future work should identify which factors are unique to Boston Latin Academy and which are common across all Boston high schools.</p>
+         </div>
+      </div>
+   </div>
+   <!--Place Data visualisation Scipts Below-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="barchart.js"></script>
+    <script src="piecharts.js"></script>
+    <script src="barchart_gender.js"></script>
+    <script src="piecharts_gender.js"></script>
+
+    
+</body>
+</html>
