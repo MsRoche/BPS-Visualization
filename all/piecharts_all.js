@@ -213,12 +213,12 @@ for (var i = 0; i < rawData.length; i++) {
               .style("display", "inline-block")
               .html("<b>" + 
                 cat + "</b>" + "<br>" +
-                "Black: " + (data[cat].Black) + " students" + "<br>" + 
-                "Hispanic: " + (data[cat].Hispanic) + " students" + "<br>" + 
-                "Asian: " + (data[cat].Asian) + " students" + "<br>" + 
-                "White: " + (data[cat].White) + " students" + "<br>" + 
-                "Other: " + (data[cat].Other) + " students" + "<br>" + 
-                "Native American: " + (data[cat]["Native American"]) + " students" 
+                "Black: " + (data[cat].Black) + "<br>" + 
+                "Hispanic: " + (data[cat].Hispanic) + "<br>" + 
+                "Asian: " + (data[cat].Asian) + "<br>" + 
+                "White: " + (data[cat].White) + "<br>" + 
+                "Other: " + (data[cat].Other) + "<br>" + 
+                "Native American: " + (data[cat]["Native American"]) 
                 );
         })
     .on('click', function(d) { dispatch.call("pieClickRace", null, d3.select(this).attr('text')); });
