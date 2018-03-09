@@ -90,7 +90,7 @@ d3.csv("AllData.csv", function(d, i, columns) {
                   .html("<b>" + 
                     (d.data.name) + "</b>" + "<br>" +
                     "Native American: " + (d.data["Native American"]) + " students" + "<br>" + 
-                    "White: " + (d.data.White) + " students" + "<br>" + 
+                    "White: " + (d.data.White) + "<br>" + 
                     "Other: " + (d.data.Other) + " students" + "<br>" +
                     "Asian: " + (d.data.Asian) + " students" + "<br>" + 
                     "Hispanic: " + (d.data.Hispanic) + " students" + "<br>" + 
