@@ -89,12 +89,12 @@ d3.csv("AllData.csv", function(d, i, columns) {
                   .style("display", "inline-block")
                   .html("<b>" + 
                     (d.data.name) + "</b>" + "<br>" +
-                    "Native American: " + (d.data["Native American"]) + " students" + "<br>" + 
+                    "Native American: " + (d.data["Native American"]) + "<br>" + 
                     "White: " + (d.data.White) + "<br>" + 
-                    "Other: " + (d.data.Other) + " students" + "<br>" +
-                    "Asian: " + (d.data.Asian) + " students" + "<br>" + 
-                    "Hispanic: " + (d.data.Hispanic) + " students" + "<br>" + 
-                    "Black: " + (d.data.Black) + " students" + "<br>"
+                    "Other: " + (d.data.Other) + "<br>" +
+                    "Asian: " + (d.data.Asian) +"<br>" + 
+                    "Hispanic: " + (d.data.Hispanic) + "<br>" + 
+                    "Black: " + (d.data.Black) + "<br>"
                     );
             });
           
